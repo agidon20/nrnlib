@@ -1,6 +1,9 @@
 /**
 * ColorMap is simply to use a colormap from the type jet
 * to any plot shape object
+* usage:
+* 		objref c
+*		c = new TColorMap(shape_obj) 
 */
 D__TCOLORMAPHOC = 1
 begintemplate TColorMap
@@ -11,7 +14,7 @@ begintemplate TColorMap
 		if(numarg()>0){
 			cfile = new File($s1)
 		}else{
-			cfile = new File("$(ALIB)guialib/jet.cm")				
+			cfile = new File("./cm/jet.cm")				
 		}
 		cfile.ropen()
 		cmat.scanf(cfile)
